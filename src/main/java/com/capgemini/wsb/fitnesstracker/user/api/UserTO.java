@@ -1,37 +1,25 @@
 package com.capgemini.wsb.fitnesstracker.user.api;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.annotation.Nullable;
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Data;
 
 import java.time.LocalDate;
-
-@Entity
-@Table(name = "users")
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@ToString
 @Data
-public class User {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class UserTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Nullable
     private Long id;
-
-    @Column(name = "first_name", nullable = false)
     private String firstName;
-
-    @Column(name = "last_name", nullable = false)
     private String lastName;
-
-    @Column(name = "birthdate", nullable = false)
     private LocalDate birthdate;
-
-    @Column(nullable = false, unique = true)
     private String email;
 
-    public User(
+    public UserTO(
             final String firstName,
             final String lastName,
             final LocalDate birthdate,
@@ -43,5 +31,8 @@ public class User {
         this.email = email;
     }
 
+    public UserTO(Long id, String firstName) {
+        this.id = id;
+        this.firstName = firstName;
+    }
 }
-
