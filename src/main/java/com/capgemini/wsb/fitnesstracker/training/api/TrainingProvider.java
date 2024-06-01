@@ -20,6 +20,6 @@ public interface TrainingProvider {
 
     // TODO: JAVA DOC
 
-    List<Training> getAllTrainings();
+    List<TrainingTO> getAllTrainings();
 
 }
