@@ -6,11 +6,14 @@ import com.capgemini.wsb.fitnesstracker.training.api.TrainingTO;
 import com.capgemini.wsb.fitnesstracker.user.api.User;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 // TODO: Provide Impl
+@Service
 public class TrainingServiceImpl implements TrainingProvider {
 
     private TrainingRepository trainingRepository;
