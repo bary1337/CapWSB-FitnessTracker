@@ -17,7 +17,7 @@ import com.capgemini.wsb.fitnesstracker.training.internal.ActivityType;
 import com.capgemini.wsb.fitnesstracker.user.api.UserTO;
 import com.capgemini.wsb.fitnesstracker.user.internal.UserDto;
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/v1/trainings")
 public class TrainingController {
 
     private final TrainingServiceImpl trainingService;
