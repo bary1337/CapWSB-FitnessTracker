@@ -13,4 +13,6 @@ public interface TrainingRepository extends JpaRepository<Training, Long> {
     List<Training> findTrainingsCompletedAfter(Timestamp cutoffDate);
 
     List<Training> findByActivityType(ActivityType activityType);
+
+    List<Training> findByDistanceGreaterThan(double distance);
 }

@@ -80,4 +80,11 @@ public class TrainingServiceImpl implements TrainingProvider {
         return trainingTO;
     }
 
+    public List<Training> findTrainingsByDistanceGreaterThan(double distance) {
+        List<Training> trainingList = trainingRepository.findAll();
+        return trainingRepository.findByDistanceGreaterThan(trainingList).stream()
+                .map()
+
+    }
+
 }

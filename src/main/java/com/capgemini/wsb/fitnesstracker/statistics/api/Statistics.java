@@ -4,11 +4,12 @@ import com.capgemini.wsb.fitnesstracker.user.api.User;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.sql.ConnectionBuilder;
+
 @Entity
 @Table(name = "statistics")
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString
 public class Statistics {
 
@@ -28,5 +29,7 @@ public class Statistics {
 
     @Column(name = "total_calories_burned")
     private int totalCaloriesBurned;
+
+
 
 }

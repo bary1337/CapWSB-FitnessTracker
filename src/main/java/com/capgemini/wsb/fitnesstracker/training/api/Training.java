@@ -39,6 +39,9 @@ public class Training {
     @Column(name = "distance")
     private double distance;
 
+    @Column(name = "duration")
+    private int duration;
+
     @Column(name = "average_speed")
     private double averageSpeed;
 
