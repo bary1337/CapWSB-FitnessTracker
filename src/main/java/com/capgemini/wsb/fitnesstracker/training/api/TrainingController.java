@@ -67,7 +67,8 @@ public class TrainingController {
 
     @GetMapping("{distance}")
     public ResponseEntity<List<Training>> getAllTrainingsByDistanceGreaterThan(@PathVariable double distance) {
-        return trainingService.findTrainingsByDistanceGreaterThan(distance);
+        List<Training> trainings = trainingService.findTrainingsByDistanceGreaterThan(distance);
+        return ResponseEntity.ok(trainings);
     }
 
 }
