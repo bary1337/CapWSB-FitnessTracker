@@ -25,6 +25,10 @@ public class TrainingTO {
     private Double averageSpeed;
 
     @JsonCreator
+    public TrainingTO() {
+    }
+
+    @JsonCreator
     public TrainingTO(Training training) {
         this.id = training.getId();
         this.user = training.getUser();
